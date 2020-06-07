@@ -6,6 +6,11 @@ var makePolitician = function (polName,results,totalVotes) {
     politician.correctVote = function(index,newValue){
       this.electionResults[index] = newValue;
     }
+    politician.countV = function(){
+      this.totalVotes = this.electionResults.reduce(function(currentTV,currentV){
+        return currentTV + currentV;
+      });
+    }
 
   return politician;
 }
@@ -27,3 +32,6 @@ harveyDent.correctVote(43,11);
 obama.correctVote(43,27);
 
 console.log(harveyDent.electionResults,obama.electionResults);
+harveyDent.countV();
+obama.countV();
+console.log(harveyDent.totalVotes,obama.totalVotes);
