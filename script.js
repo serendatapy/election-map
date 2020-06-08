@@ -66,30 +66,8 @@ else {
 console.log("AND THE WINNER IS..."+winner);
 
 var tableTop = document.getElementById('countryResults');
-tabletop.children[0].children[0].children[0] = "harvey";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+tableTop.children[0].children[0].children[0].innerText = harveyDent.name;
+tableTop.children[0].children[0].children[1].innerText = harveyDent.totalVotes;
+tableTop.children[0].children[0].children[2].innerText = obama.name;
+tableTop.children[0].children[0].children[3].innerText = obama.totalVotes;
+tableTop.children[0].children[0].children[5].innerText = winner;
