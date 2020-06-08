@@ -64,3 +64,32 @@ else {
 }
 
 console.log("AND THE WINNER IS..."+winner);
+
+var tableTop = document.getElementById('countryResults');
+tabletop.children[0].children[0].children[0] = "harvey";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
