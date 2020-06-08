@@ -45,6 +45,33 @@ var setStateResults = function(state){
 
   var stateWinner = theStates[state].winner;
   theStates[state].rgbColor = stateWinner != null ? stateWinner.pColor : [11, 32, 57] ;
+
+  /*Dynamic Table*/
+  var stateInfoTable = document.getElementById('stateResults');
+  var stateHeader = stateInfoTable.children[0].children[0];
+  var stateName = stateHeader.children[0];
+  var stateAbbrev = stateHeader.children[1];
+  stateName.innerText = theStates[state].nameFull;//"HACKHAHAHA";
+  stateAbbrev.innerText = theStates[state].nameAbbrev;
+
+  /*CANDIDATE 1*/
+  var candidate1 = stateInfoTable.children[1].children[0];
+  var candidate1Name = candidate1.children[0];
+  candidate1Name.innerText = harveyDent.name;
+  var candidate1Result = candidate1.children[1];
+  candidate1Result.innerText = harveyDent.electionResults[state];
+
+  /*CANDIDATE 2*/
+  var candidate2 = stateInfoTable.children[1].children[1];
+  var candidate2Name = candidate2.children[0];
+  candidate2Name.innerText = obama.name;
+  var candidate2Result = candidate2.children[1];
+  candidate2Result.innerText = obama.electionResults[state];
+
+  /*STATE WINNER*/
+  var candidateWin = stateInfoTable.children[1].children[2];
+  var candidateWinResult = candidateWin.children[1];
+  candidateWinResult.innerText = stateWinner.name;
 }
 
 harveyDent.countV();
@@ -72,15 +99,3 @@ topRow.children[1].innerText = harveyDent.totalVotes;
 topRow.children[2].innerText = obama.name;
 topRow.children[3].innerText = obama.totalVotes;
 topRow.children[5].innerText = winner;
-
-
-
-
-
-
-
-
-
-
-
-
